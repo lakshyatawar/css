@@ -1,0 +1,116 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav
+{
+	/*padding: 10px;*/
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	width: 100%;
+}	
+
+.container
+{
+	padding: 10px;
+	max-width: 1200px;
+	width: 90%;
+	/*background: crimson;*/
+	text-align: center;
+	display: flex;
+	margin: auto;
+	justify-content: space-between;
+}
+
+h1
+{
+	padding-top: 10px;
+}
+
+.logo
+{
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+} 
+
+.bars
+{
+	color: white;
+	font-size: 28px;
+	display: none;
+}
+
+#chk
+{
+	display: none;
+}
+
+.ulist li
+{
+	display: inline-block;
+	padding: 15px 20px;
+}
+
+.ulist li a
+{
+	text-decoration: none;
+	color: white;
+}
+
+/*----------------------------------------------*/
+
+@media( max-width: 786px)
+{
+	.ulist
+	{
+      padding: 15px;
+	}
+
+	.container
+	{
+		flex-direction: column;
+	}
+}
+
+/*-----------------------------------------------*/
+
+@media(max-width: 600px)
+{
+	.ulist
+	{
+		background: rgba(0, 0, 0, 0.8);
+		position: fixed;
+		top: 57px;
+		width: 100%;
+		left: -100%;
+		transition: 1s;
+	}
+
+	.container
+	{
+		flex-direction: row;
+	}
+
+	.bars
+	{
+		display: block;
+	}
+
+	.ulist li
+	{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	#chk:checked ~ .ulist
+	{
+		left: 0;
+	}
+}
